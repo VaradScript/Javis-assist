@@ -1,54 +1,45 @@
-Javis-assist: Your Personal AI Assistant
-Introduction
+import speech_recognition as sr
+import pyttsx3
 
-Javis-assist is a versatile AI assistant designed to streamline your daily tasks. It can:
+# Initialize speech recognition and text-to-speech engines
+recognizer = sr.Recognizer()
+engine = pyttsx3.init()
 
-Understand and respond to your commands
-Integrate with various APIs and services
-Provide information and complete actions
-Features
+def speak(text):
+    """
+    Speaks the given text using the text-to-speech engine.
+    """
+    engine.say(text)
+    engine.runAndWait()
 
-[Feature 1]: Describe the feature and its benefits.
-[Feature 2]: Explain the functionality and advantages.
-[Feature 3]: Provide details about the capability and its value.
-Installation
+def listen():
+    """
+    Listens for user input using speech recognition.
+    """
+    try:
+        with sr.Microphone() as source:
+            print("Listening...")
+            audio = recognizer.listen(source)
+        try:
+            text = recognizer.recognize_google(audio)
+            print(f"You said: {text}")
+            return text
+        except sr.UnknownValueError:
+            print("Could not understand audio")
+        except sr.RequestError as e:
+            print(f"Could not request results from Google Speech Recognition service; {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
-Prerequisites:
-
-[Dependency 1]: Installation instructions
-[Dependency 2]: Installation instructions
-Clone the repository:
-
-Bash
-
-git clone https://github.com/VaradScript/Javis-assist
-Install dependencies:
-
-Bash
-
-cd Javis-assist
-pip install -r requirements.txt
-Usage
-
-Run the application:
-
-Bash
-
-python javis_assistant.py
-Interact with Javis-assist using commands.
-
-Customization
-
-[Configuration file]: Customize settings to your preferences.
-[API keys]: Obtain and set API keys for external services.
-Contributing
-
-Refer to CONTRIBUTING.md for guidelines on contributing.
-
-License
-
-Javis-assist is licensed under the [License Name] license.
-
-Disclaimer
-
-This software is provided as-is with no warranty. Use it at your own risk.
+if __name__ == "__main__":
+    while True:
+        user_input = listen()
+        if user_input:
+            # Process user input and perform actions
+            if "hello" in user_input:
+                speak("Hello, how can I assist you today?")
+            elif "goodbye" in user_input:
+                speak("Goodbye!")
+                break
+            else:
+                speak("I'm still learning. Try asking me something else.")
