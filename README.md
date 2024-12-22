@@ -85,7 +85,7 @@ who participated in this project.
 - **Shaan Khan** - _Provided Created README Generator_ - [Shaan Khan](https://github.com/ShaanCoding)
 
  
-## License
+# License
 
 This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
 Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
