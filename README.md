@@ -75,7 +75,7 @@ We use [Semantic Versioning](http://semver.org/) for versioning. For the version
 available, see the [tags on this
 repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
  
-## Authors
+# Authors
 
 See also the list of
 [contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
