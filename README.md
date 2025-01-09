@@ -8,7 +8,7 @@ Initially appeared on
 
 <br>But the page cannot open anymore so that is why I have moved it here.
  
-## Getting Started
+## Getting Started.
 
 These instructions will give you a copy of the project up and running on
 your local machine for development and testing purposes. See deployment
@@ -29,7 +29,7 @@ Say what the step will be
 
     Give the example
 
-And repeat
+And repeat..
 
     until finished
 
