@@ -90,6 +90,6 @@ details
 ## Acknowledgments
 
 - Hat tip to anyone whose code is used.
-- Inspiration
+- Inspiration...
 
 ##
