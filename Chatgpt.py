@@ -47,7 +47,7 @@ def Resultscrapper():
 #     driver.find_element(by=By.XPATH,value=Xpath).click()
 
 # Popupremover()
-# sleep(5000)
+ sleep(5000)
 
 Websiteopener()
 print("Loaded")
